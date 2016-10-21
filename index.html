@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<title>个人简历</title>
+	<link rel="stylesheet" href="css/index-9ac5ac98e2.css">
+	<link rel="stylesheet" href="css/iconfont/iconfont.css" />
+	<script type="text/javascript">
+		// 扩展API加载完毕后调用onPlusReady回调函数 
+		document.addEventListener( "plusready", onPlusReady, false );
+		// 扩展API加载完毕，现在可以正常调用扩展API 
+		function onPlusReady() {
+			console.log("plusready");
+		}
+		var oPai=document.getElementById('pai');
+		// 拍照
+		function captureImage(){
+			var cmr = plus.camera.getCamera();
+			var res = cmr.supportedImageResolutions[0];
+			var fmt = cmr.supportedImageFormats[0];
+			console.log("Resolution: "+res+", Format: "+fmt);
+			cmr.captureImage( function( path ){
+					alert( "Capture image success: " + path );  
+				},
+				function( error ) {
+					alert( "Capture image failed: " + error.message );
+				},
+				{resolution:res,format:fmt}
+			);
+		};
+	</script>
+	<script type="text/javascript" >
+		// 扩展API加载完毕后调用onPlusReady回调函数 
+		document.addEventListener( "plusready", onPlusReady, false );
+		// 扩展API加载完毕，现在可以正常调用扩展API
+		function onPlusReady() {
+			var e = document.getElementById("scan");
+			e.removeAttribute( "disabled" );
+		}
+		var scan = null;
+		function onmarked( type, result ) {
+			var text = '未知: ';
+			switch(type){
+				case plus.barcode.QR:
+				text = 'QR: ';
+				break;
+				case plus.barcode.EAN13:
+				text = 'EAN13: ';
+				break;
+				case plus.barcode.EAN8:
+				text = 'EAN8: ';
+				break;
+			}
+			alert( text+result );
+		}
+		//创建控件
+		function startRecognize() {
+			scan = new plus.barcode.Barcode('bcid');
+			scan.onmarked = onmarked; 
+			scan.start();
+		}
+		//开始扫描
+		/*function startScan() {
+			scan.start();
+			scan = new plus.barcode.Barcode('bcid');
+			scan.onmarked = onmarked; 
+		}*/
+		//取消扫描
+		/*function cancelScan() {
+			scan.cancel();
+		}*/
+		//开启闪光灯
+		/*function setFlash() {
+			scan.setFlash();
+		}*/
+			</script>
+			<style type="text/css">
+		*{
+			-webkit-user-select: none;
+		}
+		
+		#bcid {
+			background:#0F0;
+			height:360px;
+			width:360px; 
+		}
+			</style>	
+</head>
+<body >
+	  <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide item1">
+				<div class="music">
+				<!--<audio  loop="loop" autoplay="autoplay" src="http://res1.eqh5.com/b3f0db87d9ff4860a26d207483c0a291.mp"></audio>-->
+				</div>
+				<p class="ani p1" swiper-animate-effect="tada" swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+                                    个人简历
+                 </p>
+                <div class="line"></div>
+                <div class="ani p2" swiper-animate-effect="fadeInUp" swiper-animate-duration="1s" swiper-animate-delay="2s">
+                                    周孟祥
+                </div>
+                <div class="me">
+                    <img src="images/me.jpg">
+                </div>
+                    <div class="ani tap_more" swiper-animate-effect="rubberBand" swiper-animate-duration="1s" swiper-animate-delay="3s">
+                        <p>点击了<br>解更多</p>
+                    </div> 
+				</div>
+            <div class="swiper-slide item2">
+            	<div class="music">
+            		<!--<audio  loop="loop" autoplay="autoplay" src="http://res1.eqh5.com/b3f0db87d9ff4860a26d207483c0a291.mp"></audio>-->
+            	</div>
+            	
+            	<div class="more">
+            		<img src='images/me2.jpg' style="width:100%;height:100%;border-radius:50%">
+                </div>
+            	<div class="my_message">
+                    <p class="ani p1" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="0.5s" >
+                    	基本资料:
+                    </p>
+                    <p class="ani p1" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="1s">
+                    	姓名：
+                        <span class="ani p1" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="1.5" >
+                        	周孟祥
+                        </span>
+                    </p>
+                    <p class="ani p1" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="2s">
+                    	毕业院校：
+                         <span class="ani p1" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="2.5s" >
+                         	河南农业大学
+                         </span>
+
+                    </p>
+                    <p class="ani p1" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="3s">
+                    	专业：
+                         <span class="ani p1" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="3.5s" >
+                         	汽车服务工程
+                         </span>
+                    </p>
+                    <p class="ani p1" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="4s">
+                    	住址：
+                         <span class="ani p1" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="4.5" >
+                         	郑州市黄河路66号
+                         </span>
+                    </p>
+
+                </div>
+            	
+            </div>
+            <div class="swiper-slide item9">
+            	 <div class="music">
+            		<!--<audio  loop="loop" autoplay="autoplay" src="http://res1.eqh5.com/b3f0db87d9ff4860a26d207483c0a291.mp"></audio>-->
+            	</div> 
+                                
+                                    
+	           <div>
+	              <img src="images/me2.jpg" class="ani pic1" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1.5s"  swiper-animate-delay="1s"> 
+	           </div>
+	    		<div>
+	                <p class="ani p1" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="2.5s" >
+	                	爱好:科技、音乐、打游戏、撸代码、运动、看电影
+	                </p>
+	          		<p class="ani p1" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="3.5s" style="margin-top:40px;">
+	          			应聘岗位:Web前端工程师
+	          		</p>
+	           </div>
+	            <div id="enter" class=" p1" swiper-animate-effect="tada" swiper-animate-duration="0.5s" swiper-animate-delay="1s">
+	                <p>click me</p>
+	            </div>
+                                
+
+            </div>
+            
+            <div class="swiper-slide item3"> 
+				<div class="myidea ani p1" swiper-animate-effect="shake" swiper-animate-duration="1s" swiper-animate-delay="0.5" style="margin-top:30px;">
+        			个人能力：
+        		</div>
+                <div style="margin-top:20px;">
+                    <p class="ani p1" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="1.5s">
+                      	 精通：
+                        <p class="ani p1" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="2.5s" >DIV+CSS和W3C标准;Fixed、Fulid、Flex、Responsive布局</p>
+                    </p>
+                    <p class="ani p1" swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="3.5s">
+                    	框架：
+                        <p class="ani p1" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="4.5s" >Jquery、Zepto、AngularJs、Recat、Avalon等</p>
+                    </p>
+                    <p class="ani p1" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="5.5s">
+                    	类库：
+                         <p class="ani p1" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="6.5s" >Bootstrap、Swiper、Iscroll等</p>
+                    </p>
+                    <p class="ani p1" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="7.5s">
+                   		 规范：
+                         <p class="ani p1" swiper-animate-effect="bounceInRight" swiper-animate-duration="1s" swiper-animate-delay="8.5s" >HTML4、HTML5等</p>
+                        </p>
+                    </p>
+                </div>
+					
+            </div>
+            <div class="swiper-slide item4">
+                <header>
+                	<div class="around">
+                		<button class="icon iconfont"   onclick="captureImage()">&#xe640;</button>
+                		<button class="icon iconfont" onclick='startRecognize()' >&#xe630;</button>
+                	</div>
+                	
+                </header>
+            </div>
+            <div class="swiper-slide item5">
+            	
+            </div>
+            <div class="swiper-slide item6">Slide 8</div>
+            <div class="swiper-slide item7">Slide 9</div>
+            <div class="swiper-slide item8">Slide 10</div>
+        </div>
+    </div>
+	
+<div id="mainContent">
+	<div class="m_header">
+		
+  		<div id="header">我的技能</div> 
+  		
+	</div>
+	 
+  	<div id="wrapper">
+		<div id="scroller">
+			<ul></ul>
+		</div>
+    </div>
+    <div id="footer">
+		<div class="button" id="skill">
+        <i class="icon iconfont">&#xe637;</i>
+        <p>技能</p>
+        
+        </div>
+		<div class="button" id="project">
+        <i class="icon iconfont">&#xe60f;</i>
+        <p>兴趣</p>
+        </div>
+		<div class="button" id="work">
+         <i class="icon iconfont">&#xe650;</i>
+         <p> 学习</p>
+        </div>
+		<div class="button" id="my">
+        <i class="icon iconfont">&#xe608;</i>
+        <p>我</p>
+        </div>
+	</div>
+</div>  
+    
+ <div id="danmu"></div>
+
+
+	<script type="text/javascript" src="js/index-3dcbcfdc11.js"></script>
+</body>
+</html>

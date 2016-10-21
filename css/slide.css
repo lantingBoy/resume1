@@ -1,0 +1,145 @@
+.swiper-container .swiper-wrapper .swiper-slide .me img {
+  width: 140px;
+  height: 160px;
+  margin-top: 40px;
+  box-shadow: 5px 5px 5px 5px gray;
+  border-radius: 5px; }
+
+.swiper-container .swiper-wrapper .swiper-slide .music {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 200;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: url(../images/music.svg) no-repeat;
+  background-size: contain;
+  animation: sports 3s infinite linear;
+  -webkit-animation: sports 3s infinite linear;
+  -moz-animation: portsport 3s infinite linear;
+  -o-animation: sports 3s infinite linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
+
+.swiper-container .swiper-wrapper #enter {
+  width: 100px;
+  height: 100px;
+  background: red;
+  outline: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 40px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: ani 4s infinite linear;
+  -webkit-animation: ani 4s infinite linear;
+  -moz-animation: ani 4s infinite linear;
+  -o-animation: ani 4s infinite linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
+
+@keyframes ani {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-webit-keyframes ani {
+  .swiper-container .swiper-wrapper from {
+    transform: rotate(0deg); }
+  .swiper-container .swiper-wrapper to {
+    transform: rotate(360deg); } }
+
+@-moz-keyframes ani {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-o-keyframes ani {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.swiper-container .swiper-wrapper .more {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  animation: sports 3s infinite linear;
+  -webkit-animation: sports 3s infinite linear;
+  -moz-animation: portsport 3s infinite linear;
+  -o-animation: sports 3s infinite linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
+
+@keyframes sports {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-webit-keyframes sports {
+  .swiper-container .swiper-wrapper from {
+    transform: rotate(0deg); }
+  .swiper-container .swiper-wrapper to {
+    transform: rotate(360deg); } }
+
+@-moz-keyframes sports {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+@-o-keyframes sports {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.swiper-container .blue {
+  background: red; }
+
+.item1 .line {
+  width: 0;
+  height: 2px;
+  background-color: rgba(60, 60, 60, 0.4);
+  animation: run 4s infinite linear;
+  -webkit-animation: run 4s infinite linear;
+  -moz-animation: run 4s infinite linear; }
+
+@keyframes run {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@-webkit-keyframes run {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@-moz-keyframes run {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
